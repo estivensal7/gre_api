@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
-// 	app.use(express.static("client/build"));
-// }
+// app.get("/", function(req, res) {
+// 	res.send(JSON.stringify({ Hello: "World" }));
+// });
 
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
